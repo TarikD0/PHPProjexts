@@ -70,8 +70,9 @@
         }
 
         .half {
+        	padding-left: 10%;
             flex: 1;
-            width: 100%;
+            width: 100%;	
             display: flex;
             justify-content: center;
             align-items: center;
@@ -79,7 +80,7 @@
         }
 
         .half:first-child {
-            border-top: none;
+            border-top: 1px;
             /* Remove top border for the first half */
         }
 
@@ -187,8 +188,8 @@
 
         .main-block {
             display: flex;
-            width: 90%;
-            padding: 10px 0;
+            width: 100%;
+            padding: 10px;
             border-radius: 5px;
             box-shadow: 1px 1px 8px 0px #666;
             background: #fff;
@@ -202,7 +203,7 @@
 
         i {
             width: 50px;
-            font-size: 24px;
+            font-size: 150%;
         }
 
         .btn {
@@ -277,6 +278,7 @@
 
         .chat-text {
             margin-left: 10px;
+            font-size: 12px;
             /* Add margin to the left of the chat text */
         }
     </style>
@@ -331,8 +333,6 @@
                     <div class="main-block">
                         <div class="block-item left">
                             <h1>Sign up with:</h1>
-                            <p><small>W3docs provides free learning materials for programming languages like HTML, CSS,
-                                    Java Script, PHP etc.</small>
                             </p>
                         </div>
                         <div class="block-item right">
@@ -347,16 +347,17 @@
                 <script src="https://accounts.google.com/gsi/client" async></script>
                 <div class="top-row">
                     <div class="main-block">
-                        <div class="block-item left">
-                            <h1>Join our community</h1>
-                            <p><small>W3docs provides free learning materials for programming languages like HTML, CSS,
-                                    Java Script, PHP etc.</small>
+                    	<div class="block-item left">
+                            <h4>Meet the team</h4>
+
                             </p>
                         </div>
-                        <div class="block-item right chat-container">
+                        <div class="block-item right">
+                            <button class="btn google" data-provider="google"><i class="fab fa-google"></i><span>Google</span></button>
+                        </div>
+                        
 
-                            <button class="chat-button" onclick="openChat()">💬</button>
-                            <div class="chat-text">24/7 Customer Support</div>
+
                         </div>
 
                     </div>

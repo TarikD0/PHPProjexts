@@ -80,6 +80,10 @@
             cursor: pointer;
             background-color: #f0f0f0;
         }
+        .addform {
+            padding-top: 6%;
+        }
+
 
     </style>
 </head>
@@ -87,7 +91,8 @@
     <?php include('templates/header.php') ?>
 
     <section class="container grey-text">
-        <h4 class="center">Add a Product</h4>
+        <div class="cd">
+        <div class="addform">
         <form class="white" action="add.php" method="POST">
             <label>Your email:</label>
             <input type="text" name="email" value="<?php echo htmlspecialchars($email) ?>">
@@ -102,7 +107,10 @@
                 <input type="submit" name="submit" value="submit" class="btn brand z-depth-0 same-width">
                 <input type="submit" name="cancel" value="cancel" class="btn brand z-depth-0 same-width">
             </div>
+        
         </form>
+    </div>
+    </div>
     </section>
 
     <?php include('templates/footer.php') ?>

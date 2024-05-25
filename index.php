@@ -27,14 +27,16 @@
 <html>
 <style>
 .card {
-    background-color: #fff;
+    background-color: black;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
     margin: 20px;
     padding: 20px;
-    text-align: center;
+    padding-top: 30px;
+    text-align: left;
+
 }
 
 /* Hover effect */
@@ -63,8 +65,8 @@
     background-color: #007bff;
     color: #fff;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 5px 20px;
+    border-radius: 2px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -82,15 +84,29 @@
 
 /* Add some padding to the card content */
 .card-content {
-    padding: 20px;
+    padding: 200px;
 }
+.row {
+    padding-top: 2%;
+}
+
+
 </style>
  <?php include('templates/header.php') ?>
- <h4 class="center grey-text">Products</h4>
  <div class="container">
+    <div class="row">
+        <div class="textbox"></div>
+    </div>
+    <div class="row">
+        
+        <div class="card">
+            Hello
+        </div>
+    </div>
  	<div class="row">
  		<?php foreach ($products as $product): ?>
- 			<div class="col s6 md3">
+ 			<div class="col s6 md4">
+
  				<div class="card card-gradient z-depth-0">
  					<div class="card-body card-content center">
  						<img src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Vehn%C3%A4pelto_6.jpg" width="50" height="50">

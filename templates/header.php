@@ -1,9 +1,20 @@
 <head>
+	
 	<title>Products</title>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css">
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
 
 	 <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <style type="text/css">
+    	html {
+			width: 100vw;
+        	}
+
     	.brand {
 
     		background: #cbb09c;
@@ -16,64 +27,21 @@
     		margin: 20px auto;
     		padding: 20px;
     	}
-    	        #btnsignin {
-            display: inline-block;
-            padding: 10px 20px;
-            border: 2px solid transparent;
-            border-radius: 5px;
-            text-decoration: none;
-            color: #fff;
-            background-color: #007bff;
-            transition: all 0.3s ease;
+    	 #dialog {
+            font-family: Arial, sans-serif;
         }
-
-        /* Hover effect */
-        #btnsignin:hover {
-            background-color: #0056b3;
-            border-color: #0056b3;
-        }
-
-.lightbox-container {
+        .ui-dialog-titlebar {
             display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-            z-index: 9999; /* Ensure the lightbox is on top */
-            justify-content: center;
-            align-items: center;
+        }
+        @media (max-width: 600px) {
+            .ui-dialog {
+                width: 90% !important;
+                height: 80% !important;
+                left: 5% !important;
+                top: 10% !important;
+            }
         }
 
-        .lightbox-content {
-            max-width: 80%;
-            max-height: 80%;
-            overflow: auto;
-            background-color: #fff;
-            border-radius: 5px;
-            padding: 20px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-        }
-
-        .lightbox-close {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            cursor: pointer;
-        }
-
-        .iframe-container {
-            position: relative;
-            width: 100%;
-            height: 100%;
-        }
-
-        .iframe-container iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
     </style>
 </head>
  <body clas="grey lighten-4">
@@ -82,25 +50,11 @@
 ?>
 	<nav class="z-depth-0">
 		<div class="container">
+			
 			<a href="#" class="brand-logo brand-text">Products</a>
 			<ul id = "nav-mobile" class="right hide-on-small-and-down">
-				<li><a href="add.php" class = "btn brand z-depth-0">Add product</a></li>
-<a href="#" onclick="openLightbox('<?php echo $pageURL; ?>')">Open Page</a>
-				<li><a href="templates/login/login.php" id="btnsignin" class="btn brand z-depth-0" onclick="openLightBox(<?php echo $pageURL; ?>)">Log In</a></li>
+				<li><a href="add.php" class = "btn brand z-depth-3">Add product</a></li>
+				<li><a href="#" class="btn brand z-depth-0" onclick="#">Log In</a></li>
+
 			</ul>
 		</div>
-	</nav>
-	<script>
-function openLightbox(url) {
-            var iframe = document.getElementById('iframeContent');
-            iframe.src = url;
-            document.querySelector('.lightbox-container').style.display = 'flex';
-        }
-
-        // Function to close the lightbox
-        function closeLightbox() {
-            var iframe = document.getElementById('iframeContent');
-            iframe.src = ""; // Clear the iframe content
-            document.querySelector('.lightbox-container').style.display = 'none';
-        }
-        </script>
