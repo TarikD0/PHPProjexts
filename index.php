@@ -105,7 +105,7 @@
     </div>
  	<div class="row">
  		<?php foreach ($products as $product): ?>
- 			<div class="col s6 md4">
+ 			<div class="col s6 md3">
 
  				<div class="card card-gradient z-depth-0">
  					<div class="card-body card-content center">

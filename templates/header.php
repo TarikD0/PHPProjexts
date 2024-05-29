@@ -1,3 +1,21 @@
+<?php 
+
+session_start();
+
+#$_SESSION['name'] = 'yoshi';
+
+if ($_SERVER['QUERY_STRING'] == 'noname') {
+
+	unset($_SESSION['name']);	
+
+}
+
+$name = $_SESSION['name'] ?? 'Guest';
+
+$gender = $_COOKIE['gender'] ?? 'Unknown';
+
+?>
+
 <head>
 	
 	<title>Products</title>
@@ -50,6 +68,7 @@
 			<ul id = "nav-mobile" class="right hide-on-small-and-down">
 				<li><a href="add.php" class = "btn brand z-depth-3">Add product</a></li>
 				<li><a href="#" class="btn brand z-depth-0" onclick="#">Log In</a></li>
-
+				<li class="grey-text"><a>Hello <?php echo htmlspecialchars($name); ?></a></li>
+				<li class="grey-text"><a>(<?php echo htmlspecialchars($gender);?>)</a></li>
 			</ul>
 		</div>
